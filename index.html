@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guardião Ancestral • Som do Ancestral</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Philosopher:wght@700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{background:#080A08;color:#F5F0E6;font-family:Inter,sans-serif;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0}
+.bg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.bg-overlay{position:absolute;inset:0;background:rgba(7,9,7,0.82);background:linear-gradient(to bottom, rgba(8,10,8,0.6), rgba(7,9,7,0.82), rgba(8,10,8,0.9))}
+.particle{position:absolute;width:2px;height:2px;background:#E6C88A;border-radius:50%;opacity:.2}
+.main{position:relative;z-index:10;max-width:520px;margin:0 auto;padding:32px 20px 40px;display:flex;flex-direction:column;align-items:center;min-height:100vh}
+.logo{width:135px;height:135px;border-radius:50%;overflow:hidden;border:1px solid rgba(201,168,106,0.6);box-shadow:0 4px 24px rgba(0,0,0,0.75)}
+.logo img{width:100%;height:100%;object-fit:cover}
+.title{margin-top:24px;text-align:center;font-family:'Cormorant Garamond','Philosopher',serif;font-weight:700;color:#E6C88A;letter-spacing:.08em;line-height:.95;text-shadow:0 2px 8px rgba(0,0,0,0.8);font-size:36px;text-transform:uppercase}
+.subtitle-row{display:flex;align-items:center;gap:10px;margin-top:12px}
+.subtitle{font-family:Inter,sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;color:#A8A29A;text-transform:uppercase}
+.desc{margin-top:14px;text-align:center;font-size:13px;color:#C4BFB5;line-height:1.6;max-width:400px}
+.phrase-card{margin-top:24px;width:100%;border-radius:12px;padding:16px 20px;background:#0F0F0E;border:1px solid #222;text-align:center}
+.phrase{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#D4C4A8;line-height:1.4}
+.buttons{margin-top:22px;width:100%;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;gap:12px;height:54px;padding:0 14px 0 12px;background:#111410;border:1px solid #2A2E28;border-radius:10px;text-decoration:none;transition:all .2s}
+.btn:hover{border-color:rgba(201,168,106,0.4);transform:translateY(-1px)}
+.btn-icon{width:28px;height:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.btn-text{flex:1;text-align:left}
+.btn-title{font-family:Inter;font-size:12px;font-weight:600;color:#F5F0E6;letter-spacing:.05em;text-transform:uppercase}
+.btn-sub{font-family:Inter;font-size:10px;color:#8A8580;margin-top:1px}
+.btn-arrow{color:#6B6560}
+.section{margin-top:22px;width:100%;background:#141914;border:1px solid #2A2E28;border-radius:12px;overflow:hidden}
+.section-head{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 0 0}
+.section-head span{font-family:Inter;font-size:10px;letter-spacing:.25em;color:#8A8580;text-transform:uppercase}
+.lancamento-grid{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:14px}
+.lancamento-grid img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.lancamento-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;color:#F5F0E6}
+.lancamento-sub{font-family:Inter;font-size:9px;letter-spacing:.2em;color:#8A8580;text-transform:uppercase;margin-top:2px}
+.poem{margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:#A8A29A;line-height:1.5}
+.desc-small{margin-top:8px;font-family:Inter;font-size:11px;color:#C4BFB5;line-height:1.6}
+.btn-ouvir{margin-top:12px;display:flex;align-items:center;justify-content:center;height:40px;width:100%;background:#F5F0E6;color:#0A0E08;border-radius:24px;font-family:Inter;font-weight:700;font-size:11px;letter-spacing:.08em;text-decoration:none}
+.footer{margin-top:40px;width:100%;border-top:1px solid #1E2220;padding-top:24px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.footer-icons{display:flex;gap:20px}
+.footer-icons a{opacity:.8}
+.footer-icons a:hover{opacity:1}
+.copy{font-family:Inter;font-size:10px;color:#6B6560;letter-spacing:.1em}
+</style>
+</head>
+<body>
+<div class="bg">
+<img src="assets/mystical_forest_seamless.webp" alt="">
+<div class="bg-overlay"></div>
+<div class="particle" style="left:12%;top:18%"></div>
+<div class="particle" style="left:78%;top:24%;width:2.5px;height:2.5px"></div>
+<div class="particle" style="left:35%;top:42%;width:1.5px;height:1.5px;opacity:.18"></div>
+<div class="particle" style="left:88%;top:58%"></div>
+<div class="particle" style="left:22%;top:72%"></div>
+<div class="particle" style="left:65%;top:85%;width:1.5px;height:1.5px;opacity:.18"></div>
+</div>
+<div class="main">
+<div class="logo"><img src="assets/photo7166058531178571149.webp" alt="Guardião Ancestral"></div>
+<div class="title">GUARDIÃO<br>ANCESTRAL</div>
+<div class="subtitle-row"><span style="color:#C9A86A;opacity:.6">🍃</span><div class="subtitle">PROJETO MUSICAL SOM DO ANCESTRAL</div><span style="color:#C9A86A;opacity:.6">🍃</span></div>
+<div class="desc">Canções que unem espiritualidade, ancestralidade e emoção, atravessando fé, força, cura interior e conexão com as raízes.</div>
+<div class="phrase-card"><div class="phrase">“Feche os olhos... Respire... e permita que o ancestral fale.”</div></div>
+
+<div class="buttons">
+<a class="btn" href="https://open.spotify.com/artist/17CQYSwZy38DfoWvVAcbcG" target="_blank">
+<div class="btn-icon" style="background:#1DB954"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.6-1.559.3z"/></svg></div>
+<div class="btn-text"><div class="btn-title">OUÇA NO <span style="color:#1DB954">SPOTIFY</span></div><div class="btn-sub">Músicas disponíveis em todas as plataformas</div></div><div class="btn-arrow">›</div>
+</a>
+<a class="btn" href="https://www.youtube.com/@GuardiaoAncestral" target="_blank">
+<div class="btn-icon" style="background:#FF0000"><svg width="16" height="12" viewBox="0 0 24 16" fill="white"><path d="M23.5 2.5C23.5 2.5 23.27 0.91 22.57 0.21C21.79 -0.57 20.92 -0.58 20.5 -0.63C16.5 -0.92 12 -0.92 12 -0.92H11.98C11.98 -0.92 7.48 -0.92 3.48 -0.63C3.06 -0.58 2.19 -0.57 1.41 0.21C0.71 0.91 0.5 2.5 0.5 2.5S0 4.77 0 7.03V9.17C0 11.43 0.5 13.7 0.5 13.7S0.71 15.29 1.41 15.99C2.19 16.77 3.23 16.74 3.7 16.83C5.4 16.99 12 17.12 12 17.12S16.5 17.11 20.5 16.83C20.92 16.78 21.79 16.77 22.57 15.99C23.27 15.29 23.5 13.7 23.5 13.7S24 11.43 24 9.17V7.03C24 4.77 23.5 2.5 23.5 2.5ZM9.75 11.21V4.39L15.88 7.81L9.75 11.21Z"/></svg></div>
+<div class="btn-text"><div class="btn-title">ACESSE O <span style="color:#FF0000">YOUTUBE</span></div><div class="btn-sub">Inscreva-se no canal e ative as notificações</div></div><div class="btn-arrow">›</div>
+</a>
+<a class="btn" href="https://www.instagram.com/somdoancestral" target="_blank">
+<div class="btn-icon" style="background:linear-gradient(45deg,#FEDA77,#F58529,#DD2A7B,#515BD4)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="white" stroke="none"/></svg></div>
+<div class="btn-text"><div class="btn-title">SIGA NO <span style="color:#DD2A7B">INSTAGRAM</span></div><div class="btn-sub">Conteúdos, bastidores e novidades</div></div><div class="btn-arrow">›</div>
+</a>
+<a class="btn" href="https://www.tiktok.com/@guardiaoancestral" target="_blank">
+<div class="btn-icon" style="background:#000"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.4a6.27 6.27 0 00-.79-.05A6.34 6.34 0 003 15.69a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.14 8.14 0 004.75 1.52V6.84a4.83 4.83 0 01-1.84-.15z"/></svg></div>
+<div class="btn-text"><div class="btn-title">ACOMPANHE NO <span style="color:#00F2EA">TIKTOK</span></div><div class="btn-sub">Vídeos, trechos e mensagens inspiradoras</div></div><div class="btn-arrow">›</div>
+</a>
+</div>
+
+<div class="section">
+<div class="section-head"><span>🍃 LANÇAMENTO EM DESTAQUE 🍃</span></div>
+<div class="lancamento-grid">
+<img src="assets/indigenous_meditation_album_cover.webp" alt="Raiz que Cura">
+<div>
+<div class="lancamento-title">RAIZ QUE CURA</div>
+<div class="lancamento-sub">Canção de Cura e Reconexão</div>
+<div class="poem">O que eu chamava de passado...<br>Ainda morava dentro de mim...<br>A medicina só mostrou<br>o que precisava florir.</div>
+<div class="desc-small">Um canto que brota da terra, cura feridas ancestrais e reconecta com a sabedoria da floresta.</div>
+<a class="btn-ouvir" href="https://youtu.be/9oSw3GSEBCc" target="_blank">▶ OUVIR AGORA</a>
+<div style="margin-top:6px;text-align:center"><a href="https://youtu.be/9oSw3GSEBCc" target="_blank" style="font-size:9px;color:#8A8580;text-decoration:none">▶ ASSISTIR NO YOUTUBE</a></div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:12px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:#0F0F0E;border:1px solid #222;border-radius:12px;padding:14px"><div style="font-family:Inter;font-size:10px;letter-spacing:.25em;color:#8A8580">SOBRE O PROJETO</div><div style="margin-top:8px;font-size:11px;color:#A8A29A;line-height:1.6">Guardião Ancestral é o projeto musical Som do Ancestral, que traz canções de rezo, cura e conexão espiritual. Músicas que tocam a alma e reconectam com as raízes mais profundas do ser.</div></div>
+<div style="background:#0F0F0E;border:1px solid #222;border-radius:12px;padding:14px"><div style="font-family:Inter;font-size:10px;letter-spacing:.25em;color:#8A8580">CONTATO</div><div style="margin-top:8px;font-size:11px;color:#A8A29A;line-height:1.5">Para parcerias, convites e mensagens de carinho:</div><a href="mailto:somdoancestral@gmail.com" style="margin-top:8px;display:inline-block;font-size:12px;color:#F5F0E6;word-break:break-all">somdoancestral@gmail.com</a></div>
+</div>
+
+<div class="footer">
+<div class="footer-icons">
+<a href="https://open.spotify.com/artist/17CQYSwZy38DfoWvVAcbcG" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="#6B6560"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.6-1.559.3z"/></svg></a>
+<a href="https://www.youtube.com/@GuardiaoAncestral" target="_blank"><svg width="20" height="14" viewBox="0 0 24 16" fill="#6B6560"><path d="M23.5 2.5C23.5 2.5 23.27 0.91 22.57 0.21C21.79 -0.57 20.92 -0.58 20.5 -0.63C16.5 -0.92 12 -0.92 12 -0.92H11.98C11.98 -0.92 7.48 -0.92 3.48 -0.63C3.06 -0.58 2.19 -0.57 1.41 0.21C0.71 0.91 0.5 2.5 0.5 2.5S0 4.77 0 7.03V9.17C0 11.43 0.5 13.7 0.5 13.7S0.71 15.29 1.41 15.99C2.19 16.77 3.23 16.74 3.7 16.83C5.4 16.99 12 17.12 12 17.12S16.5 17.11 20.5 16.83C20.92 16.78 21.79 16.77 22.57 15.99C23.27 15.29 23.5 13.7 23.5 13.7S24 11.43 24 9.17V7.03C24 4.77 23.5 2.5 23.5 2.5ZM9.75 11.21V4.39L15.88 7.81L9.75 11.21Z"/></svg></a>
+<a href="https://www.instagram.com/somdoancestral" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="1.4"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="#6B6560" stroke="none"/></svg></a>
+<a href="https://www.tiktok.com/@guardiaoancestral" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#6B6560"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.4a6.27 6.27 0 00-.79-.05A6.34 6.34 0 003 15.69a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.14 8.14 0 004.75 1.52V6.84a4.83 4.83 0 01-1.84-.15z"/></svg></a>
+</div>
+<div class="copy">© 2026 Guardião Ancestral • Todos os direitos reservados</div>
+</div>
+</div>
+</body>
+</html>
